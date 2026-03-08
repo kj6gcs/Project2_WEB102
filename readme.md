@@ -47,9 +47,7 @@ Here’s a video walkthrough of the implemented required features:
 
 [![Watch the walkthrough](https://img.youtube.com/vi/_O9va2Uv03s/hqdefault.jpg)](https://youtu.be/_O9va2Uv03s?si=9AigmvP7mgGDUuXT)
 
-Here's a GIF walkthrough (not as detailed)
-
-<img src="project2Walkthrough.gif" width="800" alt="GIF Walkthrough" />
+<img src="./public/project2Walkthrough.gif" width="800" alt="GIF Walkthrough" />
 
 GIF created with ScreenToGif (https://www.screentogif.com/) for Windows
 
