@@ -173,11 +173,12 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
   align-items: center;
   text-align: center;
+  gap: 0.75rem;
 }
-
 .card-label {
   text-transform: uppercase;
   letter-spacing: 0.14rem;
@@ -190,6 +191,17 @@ button {
   margin: 0;
   font-size: 1.8rem;
   line-height: 1.4;
+}
+
+.card-image {
+  margin-top: 1rem;
+  max-width: min(280px, 90%);
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .card-hint {
@@ -219,30 +231,80 @@ button {
 }
 
 @media (max-width: 640px) {
-  .app {
-    width: 100%;
-    padding: 1rem 0.75rem 1.25rem;
-    gap: 1.5rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
   .flashcard {
     width: 100%;
-    min-height: 300px;
+    min-height: 360px;
   }
 
   .flashcard-inner {
-    min-height: 300px;
+    min-height: 360px;
   }
+}
 
-  .flashcard-face {
-    padding: 1.25rem;
-  }
+.hero h1 {
+  font-size: 2rem;
+}
 
-  .card-content h2 {
-    font-size: 1.35rem;
-  }
+.flashcard {
+  --flip-rotation: 0deg;
+  width: min(700px, 100%);
+  min-height: 420px;
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  padding: 0;
+  background: transparent;
+  perspective: 1200px;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.flashcard-inner {
+  position: relative;
+  min-height: 420px;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--flip-rotation));
+  transition: transform 0.55s ease;
+}
+
+.flashcard-face {
+  padding: 1.25rem;
+}
+
+.card-content h2 {
+  font-size: 1.35rem;
+}
+
+.card-link {
+  display: inline-block;
+  color: #9ec5ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.end-card button {
+  align-self: center;
+}
+
+.p-center {
+  text-align: center;
+}
+
+.progress {
+  font-size: 0.9rem;
+  color: #9ec5ff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.remaining {
+  color: #9fb6e6;
+  margin-left: 4px;
 }
